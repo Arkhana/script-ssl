@@ -14,7 +14,7 @@ if [ "x$2" = "x" ]; then TIME="365"; else TIME="$2"; fi
  
 # genere une cle prive
 echo -e "\nGenerating server key\n"
-if ( ! openssl genrsa -out "$NAME.key" 4096 >> /dev/null 2>&1 ) ; then echo -e "Error" ; exit 1 ; fi
+if ( ! openssl genrsa -out "$NAME.key" 4096 >> /dev/null 2>&1 ); then echo -e "Error"; exit 1; fi
  
 # cree un csr avec la cle privee
 echo -e "\n\nGenerating certificate request\n"
